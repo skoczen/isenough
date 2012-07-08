@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     "south",
 
     "main_site",
+    "responses",
     
 )
 

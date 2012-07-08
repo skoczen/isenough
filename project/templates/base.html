@@ -7,10 +7,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>{% block title %}{% endblock %}</title>
-  <meta name="description" content="{% block description %}{% endblock %}">
+  <title>{% block title %}is enough{% endblock %}</title>
+  <meta name="description" content="{% block description %}What does love mean to you?{% endblock %}">
   <meta name="author" content="{% block author %}Steven Skoczen{% endblock %}">
-
+  <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
+  <meta property="og:title" content="{% block og-title %}is enough{% endblock %}" />
+  <meta property="og:description" content="{% block og-description %}What does love mean to you?{% endblock %}" />
+  <meta property="og:image" content="{% block og-image %}{{STATIC_URL}}base/img/opengraph.jpg{% endblock %}" />
+  <meta property="og:url" content="{% block og-url %}{% if request.is_secure %}https{% else %}http{% endif %}://{{request.get_host}}{{request.get_full_path}}{% endblock %}"/>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   {% analytical_head_top %}
 
@@ -19,6 +23,7 @@
   {% compress css %}
   <link rel="stylesheet" href="{{STATIC_URL}}base/css/animate.css">
   <link rel="stylesheet" href="{{STATIC_URL}}base/css/style.css">
+  <link rel="stylesheet" href="{{STATIC_URL}}base/css/response.css">
   {% endcompress %}
   {% endblock %}
 

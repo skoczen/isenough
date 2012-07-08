@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block js %}{{block.super}}
+<script type="text/javascript">
+$(function(){
+	$(".listen_btn").delay(10000).fadeIn(1000);
+});
+</script>
+{% endblock %}
+
+{% block css %}{{block.super}}
+
+{% endblock %}
+
+{% block content %}
+<div class="begin">
+	<a href="{% url respond %}" class="btn begin_btn primary large">Begin</a>
+	{% if enough_responses %}
+	<a href="{% url display_one %}" class="btn listen_btn large">Listen</a>
+	{% endif %}
+</div>
+{% endblock %}

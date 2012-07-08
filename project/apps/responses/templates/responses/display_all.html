@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block js %}{{block.super}}
+
+{% endblock %}
+
+{% block css %}{{block.super}}
+
+{% endblock %}
+
+{% block content %}
+<div class="display_all">
+<table>
+<tr>
+	<td class="question">
+		<div class="header">Sometimes, love is enough, so you</div>
+	</td>
+	<td class="answers">
+	{% for r in all_responses %}
+		<div class="response">{{r}}</div>
+	{% endfor %}
+	</td>
+</tr>
+</table>
+</div>
+{% endblock %}

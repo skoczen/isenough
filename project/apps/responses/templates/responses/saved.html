@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block js %}{{block.super}}
+<script type="text/javascript">
+$(function(){
+	$(".thank_you").fadeIn(1000);
+	$(".enough_people").delay(2000).fadeIn(1000);
+	$(".return").delay(3000).fadeIn(1000);
+});
+</script>
+{% endblock %}
+
+{% block css %}{{block.super}}
+
+{% endblock %}
+
+{% block content %}
+<div class="saved">
+	<div class="thank_you">Thank you for sharing.</div>
+	<div class="enough_people">If you would like, now you can <a href="{% url display_one %}" class="btn  large">Listen</a></div>
+	<!-- <div class="return"></div> -->
+{% endblock %}

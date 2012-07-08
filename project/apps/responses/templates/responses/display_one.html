@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block js %}{{block.super}}
+<script type="text/javascript">
+$(function(){
+	$(".say_more").delay(15000).fadeIn(1000).delay(20000).fadeOut();
+})
+</script>
+{% endblock %}
+
+{% block css %}{{block.super}}
+
+{% endblock %}
+
+{% block content %}
+<div class="display_one">
+	<span class="sometimes">Sometimes,</span>
+	<span class="love">love</span>
+	<span class="is">is</span>
+	<span class="enough">enough</span><span class="so">, so</span>
+	<span class="you">you</span>
+	<span class="response">{{one_response.text}}</span>
+<form>
+<div class="save">
+	<a href="{% url begin %}" class="btn large say_more no_share primary">Begin again</a>
+	<a href="{% url display_one %}?last={{one_response.order}}" class="btn large no_share">And</a>
+	
+</div>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block js %}{{block.super}}
+<script>
+$(function(){
+	var animation_speed = 0.84;
+	running_delay = 0
+	running_delay += (2000 * animation_speed);
+	$(".sometimes").hide().delay(running_delay).fadeIn(2000);
+	running_delay += (7300 * animation_speed);
+	$(".love").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (5500 * animation_speed);
+	$(".is").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (4800 * animation_speed);
+	$(".enough").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (9000 * animation_speed);
+	$(".so").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (800 * animation_speed);
+	$(".you").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (13000 * animation_speed);
+	$(".response").hide().delay(running_delay).fadeIn(1000, function(){$(".response input").delay(1000).focus();});
+	running_delay += (2000 * animation_speed);
+	$(".save").hide().delay(running_delay).fadeIn(1000);
+	running_delay += (25000 * animation_speed);
+	$(".no_share").hide().delay(running_delay).fadeIn(1000);
+	$(".entry").show();
+	$(".response input").bind("keyup",function(){
+		if ($(this).val().length > 1) {
+			$(this).css("border-width", "0px");
+		}
+	});
+});
+</script>
+{% endblock %}
+
+{% block css %}{{block.super}}
+
+{% endblock %}
+
+{% block content %}
+<div class="entry">
+	<span class="sometimes">Sometimes,</span>
+	<span class="love">love</span>
+	<span class="is">is</span>
+	<span class="enough">enough</span><span class="so">, so</span>
+	<span class="you">you</span>
+
+	<form action="" method="POST">{% csrf_token %}
+		<span class="response">
+			{{form.text}}
+		</span>
+		<div class="save">
+			<input type="submit" value="Share" class="btn large action" />
+			<a href="{% url begin %}" class="btn action large no_share">Choose not to share</a>
+		</div>
+	</form>
+</div>
+{% endblock %}
