@@ -3,7 +3,8 @@
 {% block js %}{{block.super}}
 <script>
 $(function(){
-	var animation_speed = 0.84;
+	// var animation_speed = 0.84;
+	var animation_speed = 0.04;
 	running_delay = 0
 	running_delay += (2000 * animation_speed);
 	$(".sometimes").hide().delay(running_delay).fadeIn(2000);
@@ -17,7 +18,7 @@ $(function(){
 	$(".so").hide().delay(running_delay).fadeIn(1000);
 	running_delay += (800 * animation_speed);
 	$(".you").hide().delay(running_delay).fadeIn(1000);
-	running_delay += (13000 * animation_speed);
+	running_delay += (7000 * animation_speed);
 	$(".response").hide().delay(running_delay).fadeIn(1000, function(){$(".response input").delay(1000).focus();});
 	running_delay += (2000 * animation_speed);
 	$(".save").hide().delay(running_delay).fadeIn(1000);

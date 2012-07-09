@@ -120,3 +120,51 @@ a.listen_btn {
 	left: 100px;
 	display: none;
 }
+
+/* Portrait iPad*/
+@media (max-width: 850px) { 
+	.response input {
+		width: 350px;
+	}
+	.display_one {
+		font-size: 90px;
+		
+	}
+}
+/* Mobile */
+@media (max-width: 650px) { 
+	.begin {
+		padding: 120px 0px;
+	}
+	a.listen_btn {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		margin-right: 0px;
+	}
+	.entry, .display_one {
+		width: 90%;
+		margin: 20px auto 0px auto;
+		padding: 0px;
+		font-size: 50px;
+		line-height: 50px;
+		display: none;
+	}
+	.display_one {
+		display: block;
+		
+	}
+	.response input {
+		width: 150px;
+	}
+	.saved {
+		font-size: 20px;
+		margin-top: 120px;
+	}
+	.thank_you {
+		font-size: 30px;
+	}
+	.enough_people {
+		margin: 20px 0px;
+	}
+}
