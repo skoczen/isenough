@@ -3,8 +3,7 @@
 {% block js %}{{block.super}}
 <script>
 $(function(){
-	// var animation_speed = 0.84;
-	var animation_speed = 0.04;
+	var animation_speed = 0.7;
 	running_delay = 0
 	running_delay += (2000 * animation_speed);
 	$(".sometimes").hide().delay(running_delay).fadeIn(2000);
