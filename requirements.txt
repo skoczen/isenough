@@ -7,6 +7,7 @@ django-analytical==0.12.1
 django-annoying==0.7.6
 django-compressor==1.1.2
 django-extensions==0.7.1
+django-heroku-postgresify==0.3
 django-selector==0.3
 django-staticfiles==1.2.1
 django-ses

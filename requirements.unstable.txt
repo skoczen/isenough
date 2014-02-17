@@ -4,6 +4,7 @@ django
 django-analytical>=0.12.1
 django-annoying
 django_compressor
+django-heroku-postgresify
 django-extensions
 django-selector
 django-staticfiles

@@ -15,3 +15,7 @@ COMPRESS_STORAGE = STATICFILES_STORAGE
 
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
+
+from postgresify import postgresify
+
+DATABASES = postgresify()
