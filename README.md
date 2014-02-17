@@ -1,6 +1,6 @@
 Artechetype (terrible pun) is a grab-and-go starter django+js I use when making new digital projects.  You're welcome to as well, and if you come across improvements, pull requests are welcome.
 
-NOTE: I'm still working on it. Don't use it quite yet.
+NOTE: This codebase is pretty much always evolving, and since it's for art projects, there's not a clear-cut roadmap.  If you're using it, and one would be helpful, let me know!
 
 Grab it and go
 ==============
