@@ -14,7 +14,7 @@ django-ses
 django-storages==1.1.4
 gunicorn==0.13.4
 lettuce==0.1.34
-lxml==2.3.3
+lxml==4.9.1
 mechanize==0.2.5
 nose==1.1.2
 psycopg2==2.4.4
