@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from annoying.decorators import *
+from annoying.decorators import render_to
 from responses.forms import ResponseForm
 from responses.models import EnoughResponse
 
@@ -22,7 +22,7 @@ def saved(request):
 @render_to("responses/begin.html")
 def begin(request):
     enough_responses = EnoughResponse.objects.count() > 5
-    print enough_responses
+    print(enough_responses)
     return locals()
 
 
